@@ -1,27 +1,49 @@
 import React from 'react';
 import './Main.css';
 import Card from './Card';
+import bruchetta from './assets/bruchetta.svg';
+import greek from './assets/greek salad.jpg';
+import lemon from './assets/lemon dessert.jpg';
+
+
 
 function Main() {
+
+    let priceBruschetta = '$5.99';
+    let priceGreekSalad = '$12.99';
+    let priceLemonDessert = '$5.00';
+
     const cardsData = [
         {
-            title: 'Card Title 1',
+            image: greek,
+            title: 'Greek Salad',
             content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            price: priceGreekSalad,
         },
         {
-            title: 'Card Title 2',
+            image: bruchetta,
+            title: 'Bruschetta',
             content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            price: priceBruschetta,
         },
         {
-            title: 'Card Title 3',
+            image: lemon,
+            title: 'Lemon Dessert',
             content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            price: priceLemonDessert,
         },
     ];
 
     return (
         <main className="grid-container">
             {cardsData.map((card, index) => (
-                <Card key={index} title={card.title} content={card.content} />
+                <Card
+                    key={index}
+                    image={card.image} // Pass the image URL as a prop
+                    title={card.title}
+                    price={card.price}
+                    content={card.content}
+                />
             ))}
         </main>
     );

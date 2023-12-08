@@ -6,7 +6,7 @@ function Banner() {
         <nav className="nav-container">
             <div className="logo">Banner text</div>
         </nav>
-    );
+        );
 }
 
 export default Banner;
