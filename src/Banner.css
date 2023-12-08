@@ -1,0 +1,38 @@
+/* Banner.css */
+
+/* Navigation container styles */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #495E57;
+    padding: 20px;
+    color: #F4CE14;
+    height: 150px;
+}
+
+/* Logo styles */
+.logo {
+    font-family: 'Markazi Text', serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Navigation links styles */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    color: #F4CE14;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #EE9972;
+}
