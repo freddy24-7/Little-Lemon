@@ -1,38 +1,130 @@
-/* Banner.css */
-
-/* Navigation container styles */
-.nav-container {
+.banner-container {
+    background-color: #495E57;
+    padding: 20px;
+    color: #fff;
+    height: 155px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #495E57;
-    padding: 20px;
-    color: #F4CE14;
-    height: 150px;
+    position: relative;
 }
 
-/* Logo styles */
-.logo {
-    font-family: 'Markazi Text', serif;
+.banner-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.banner-title {
     font-size: 24px;
     font-weight: bold;
-    text-transform: uppercase;
-}
-
-/* Navigation links styles */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-link {
-    font-family: 'Karla', sans-serif;
-    font-size: 16px;
+    margin-bottom: -20px;
+    margin-left: 100px;
+    margin-top: 50px;
     color: #F4CE14;
-    text-decoration: none;
 }
 
-.nav-link:hover {
-    color: #EE9972;
+.banner-subtitle,
+.banner-button {
+    margin-left: 100px;
+}
+
+.banner-text {
+    margin-left: 100px;
+    margin-top: -1px;
+}
+
+
+.banner-subtitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.banner-text {
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 300px;
+    color: #fff;
+}
+
+.banner-button {
+    background-color: #F4CE14;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.banner-button:hover {
+    background-color: #EE9972;
+}
+
+.banner-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px 10px 10px 10px;
+    position: absolute;
+    bottom: -40px;
+    right: 100px;
+    object-fit: cover;
+}
+
+/* Media query for smaller screens (e.g., mobile) */
+@media (max-width: 768px) {
+    .banner-container {
+        height: auto;
+        padding: 20px 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .banner-content {
+        margin-left: 0;
+    }
+
+    .banner-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-left: 90px;
+        margin-top: 20px;
+        color: #F4CE14;
+    }
+
+    .banner-subtitle {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        margin-top: 25px;
+        color: #fff;
+    }
+
+    .banner-text,
+    .banner-button {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 10px;
+    }
+
+    .banner-button {
+        margin-bottom: 20px;
+    }
+
+    .banner-image {
+        width: 20%;
+        height: auto;
+        border-radius: 10px;
+        position: relative;
+        bottom: -10px;
+        right: 0;
+        margin: 20px auto;
+        top: 0;
+    }
 }

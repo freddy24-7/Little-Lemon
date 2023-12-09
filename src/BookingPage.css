@@ -1,0 +1,17 @@
+/* BookingPage.css */
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    margin: auto;
+    width: 100%;
+    padding: 10px; /* Add padding for smaller screens */
+}
+
+@media (max-width: 768px) {
+    .center-container {
+        padding: 20px;
+    }
+}

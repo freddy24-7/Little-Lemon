@@ -1,17 +1,12 @@
-/* Card.css */
-
-/* Individual card styles */
 .card {
     background-color: #EDEFEE;
     padding: 20px;
     border-radius: 10px 10px 0 0; /* Rounded corners only at the top */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    height: 300px;
+    height: 400px;
     position: relative; /* Position relative for absolute image */
-    margin-top: 100px;
 }
 
-/* Card title styles */
 .card-title {
     font-family: 'Markazi Text', serif;
     font-size: 18px;
@@ -21,7 +16,6 @@
     margin-top: 200px;
 }
 
-/* Paragraph text styles */
 .card-paragraph {
     font-family: 'Karla', sans-serif;
     font-size: 16px;
@@ -30,7 +24,6 @@
     max-width: 400px;
 }
 
-/* Image styles */
 .card-image {
     position: absolute;
     top: 0;

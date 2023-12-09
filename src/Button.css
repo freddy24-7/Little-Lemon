@@ -1,0 +1,25 @@
+.custom-button {
+    background-color: #F4CE14;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-left: 100px;
+}
+
+.custom-button:hover {
+    background-color: #EE9972;
+}
+
+/* Media query for smaller screens (e.g., mobile) */
+@media (max-width: 768px) {
+    .custom-button {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}

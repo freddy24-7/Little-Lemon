@@ -5,7 +5,7 @@ import logo from './assets/Logo.svg';
 function Header() {
     return (
         <header className="header">
-            <img src={logo} alt="Company Logo" className="logo" /> {/* Use the logo image */}
+            <img src={logo} alt="Company Logo" className="logo" />
             <nav className="nav">
                 <ul className="nav-links">
                     <li><a href="#" className="nav-link">Home</a></li>

@@ -5,8 +5,6 @@ import bruchetta from './assets/bruchetta.svg';
 import greek from './assets/greek salad.jpg';
 import lemon from './assets/lemon dessert.jpg';
 
-
-
 function Main() {
 
     let priceBruschetta = '$5.99';
@@ -17,19 +15,24 @@ function Main() {
         {
             image: greek,
             title: 'Greek Salad',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            content: 'The famous greek salad of crispy lettuce, peppers, olives,' +
+                'and our Chicago style feta cheese, garnished with crunchy garlic' +
+                'and rosemary croutons.',
             price: priceGreekSalad,
         },
         {
             image: bruchetta,
             title: 'Bruschetta',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            content: 'Our Bruchetta is made from grilled bread that has been smeared ' +
+                'with garlic and seasoned with salt and olive oil.',
             price: priceBruschetta,
         },
         {
             image: lemon,
             title: 'Lemon Dessert',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            content: 'This comes straight from grandma\'s recipe book, every last ' +
+                'ingredient has been sourced and is as authentic as can be ' +
+                'imagined.',
             price: priceLemonDessert,
         },
     ];
