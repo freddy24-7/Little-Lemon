@@ -28,7 +28,6 @@ describe('BookingForm', () => {
                 <BookingForm {...mockProps} />
             </MemoryRouter>
         );
-        // Assertions for rendering if needed
     });
 
     it('submits valid form data correctly', async () => {
@@ -142,6 +141,5 @@ describe('BookingForm', () => {
             </MemoryRouter>
         );
         fireEvent.change(screen.getByLabelText('Choose date'), { target: { value: '2023-12-12' } });
-        // Here, you would check for error handling behavior
     });
 });
