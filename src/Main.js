@@ -1,12 +1,12 @@
 import React from 'react';
 import './Main.css';
 import Card from './Card';
+// Import your card data and assets
 import bruchetta from './assets/bruchetta.svg';
 import greek from './assets/greek salad.jpg';
 import lemon from './assets/lemon dessert.jpg';
 
 function Main() {
-
     let priceBruschetta = '$5.99';
     let priceGreekSalad = '$12.99';
     let priceLemonDessert = '$5.00';
@@ -42,7 +42,7 @@ function Main() {
             {cardsData.map((card, index) => (
                 <Card
                     key={index}
-                    image={card.image} // Pass the image URL as a prop
+                    image={card.image}
                     title={card.title}
                     price={card.price}
                     content={card.content}

@@ -1,18 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useFormik } from 'formik';
-import {
-    FormControl,
-    FormLabel,
-    Input,
-    Select,
-    Button,
-    Box
-} from '@chakra-ui/react';
+import { FormControl, FormLabel, Input, Select, Button, Box } from '@chakra-ui/react';
 import './BookingForm.css';
 
-function BookingForm() {
-    const [availableTimes, setAvailableTimes] = useState(['17:00', '18:00', '19:00', '20:00', '21:00', '22:00']);
-
+function BookingForm({ availableTimes, dispatch }) {
     const formik = useFormik({
         initialValues: {
             date: '',
@@ -25,7 +16,11 @@ function BookingForm() {
             // Handle form submission here
         },
     });
-    console.log(formik.values);
+
+    const handleDateChange = (e) => {
+        formik.handleChange(e); // Handle Formik's change
+        dispatch({ type: 'UPDATE_TIMES', date: e.target.value }); // Dispatch to update times
+    }
 
     return (
         <Box className="form-container" style={{ display: 'grid', maxWidth: '200px', gap: '20px' }}>
@@ -36,8 +31,10 @@ function BookingForm() {
                         id="date"
                         name="date"
                         type="date"
-                        onChange={formik.handleChange}
+                        onChange={handleDateChange}
                         value={formik.values.date}
+                        aria-required="true"
+                        aria-label="Date"
                     />
                 </FormControl>
 
@@ -48,8 +45,10 @@ function BookingForm() {
                         name="time"
                         onChange={formik.handleChange}
                         value={formik.values.time}
+                        aria-required="true"
+                        aria-label="Time"
                     >
-                        {availableTimes.map(time => (
+                        {availableTimes && availableTimes.map(time => (
                             <option key={time} value={time}>{time}</option>
                         ))}
                     </Select>
@@ -66,6 +65,8 @@ function BookingForm() {
                         max="10"
                         onChange={formik.handleChange}
                         value={formik.values.guests}
+                        aria-required="true"
+                        aria-label="Number of guests"
                     />
                 </FormControl>
 
@@ -76,13 +77,14 @@ function BookingForm() {
                         name="occasion"
                         onChange={formik.handleChange}
                         value={formik.values.occasion}
+                        aria-label="Occasion"
                     >
                         <option value="Birthday">Birthday</option>
                         <option value="Anniversary">Anniversary</option>
                     </Select>
                 </FormControl>
 
-                <Button colorScheme="yellow" type="submit">Make Your Reservation</Button>
+                <Button colorScheme="yellow" type="submit" aria-label="Submit reservation">Make Your Reservation</Button>
             </form>
         </Box>
     );
