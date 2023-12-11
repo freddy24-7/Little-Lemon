@@ -1,9 +1,10 @@
 import React from 'react';
 import { useFormik } from 'formik';
+import { fetchAPI } from './api/api';
 import { FormControl, FormLabel, Input, Select, Button, Box } from '@chakra-ui/react';
 import './BookingForm.css';
 
-function BookingForm({ availableTimes, dispatch }) {
+function BookingForm({ availableTimes, dispatch, submitForm }) {
     const formik = useFormik({
         initialValues: {
             date: '',
@@ -13,14 +14,19 @@ function BookingForm({ availableTimes, dispatch }) {
         },
         onSubmit: values => {
             console.log('Form Data', values);
-            // Handle form submission here
+            submitForm(values);
         },
     });
 
     const handleDateChange = (e) => {
-        formik.handleChange(e); // Handle Formik's change
-        dispatch({ type: 'UPDATE_TIMES', date: e.target.value }); // Dispatch to update times
-    }
+        const selectedDate = e.target.value;
+        formik.handleChange(e);
+        fetchAPI(selectedDate).then(times => {
+            dispatch({ type: 'SET_TIMES', times });
+        }).catch(error => {
+            console.error('Failed to fetch times for selected date:', error);
+        });
+    };
 
     return (
         <Box className="form-container" style={{ display: 'grid', maxWidth: '200px', gap: '20px' }}>

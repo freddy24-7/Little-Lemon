@@ -1,4 +1,3 @@
-// Specials.js
 import React from 'react';
 import './Specials.css';
 import Button from './Button';

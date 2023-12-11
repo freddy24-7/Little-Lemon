@@ -1,38 +1,33 @@
-import React, { useReducer } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Header';
 import Banner from './Banner';
 import Main from './Main';
 import Footer from './Footer';
 import Specials from './Specials';
-import BookingPage from './BookingPage';
+import Display from "./Display";
+import ConfirmedBooking from './ConfirmedBooking';
 import './App.css';
 
-// InitializeTimes and updateTimes functions here
-const initializeTimes = () => {
-    return ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
-};
-
-const updateTimes = (state, action) => {
-    // Logic to update times based on the action
-    return state;
-};
-
 function App() {
-    const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
-
     return (
         <Router>
             <Header />
-            <Banner />
             <Routes>
-                <Route path="/booking-form" element={<BookingPage availableTimes={availableTimes} dispatch={dispatch} />} />
                 <Route path="/" element={
                     <>
+                        <Banner />
                         <Specials />
+                        <Display />
+                    </>
+                } />
+                <Route path="/book-table" element={
+                    <>
+                        <Banner />
                         <Main />
                     </>
                 } />
+                <Route path="/confirmed-booking" element={<ConfirmedBooking />} />
             </Routes>
             <Footer />
         </Router>

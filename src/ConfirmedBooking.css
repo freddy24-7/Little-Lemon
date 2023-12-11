@@ -1,0 +1,29 @@
+/* ConfirmedBooking.css */
+.confirmed-booking-container {
+    background-color: #495E57;
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 500px; /* Set a reasonable max-width */
+    width: 100%; /* Take up full width until max-width is reached */
+    margin: auto; /* Auto margins for horizontal centering */
+}
+
+.confirmed-booking-container label {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .confirmed-booking-container {
+        margin-left: 140px;
+        margin-right: 140px;
+        padding: 20px;
+        width: auto; /* Adjust width for smaller screens */
+        max-width: 100%; /* Ensure it doesn't overflow the viewport */
+    }
+}

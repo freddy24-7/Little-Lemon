@@ -1,8 +1,6 @@
 import React from 'react';
 import './Card.css';
 
-// Updated Card Component (Card.js)
-
 function Card({ title, content, image, price }) {
 
 
@@ -14,7 +12,7 @@ function Card({ title, content, image, price }) {
             <div className="card-content">
                 <div className="card-title">
                     <span className="menu-item">{title}</span>
-                    <span className="price">{price}</span> {/* Replace with the actual price */}
+                    <span className="price">{price}</span>
                 </div>
                 <p className="card-paragraph">{content}</p>
             </div>

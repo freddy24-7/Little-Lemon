@@ -8,7 +8,7 @@ function Banner() {
     const navigate = useNavigate();
 
     const handleButtonClick = () => {
-        navigate('/booking-form'); // Update this path if your BookingForm route is different
+        navigate('/book-table');
     };
 
     return (
