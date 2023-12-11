@@ -1,0 +1,14 @@
+/* ErrorPage.css */
+.error-container {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.error-container h1 {
+    color: #cc0000;
+}
+
+.error-container p {
+    font-size: 18px;
+}

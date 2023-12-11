@@ -1,4 +1,3 @@
-// Main.js
 import React, {useEffect, useReducer} from 'react';
 import BookingPage from './BookingPage';
 import {fetchAPI, submitAPI} from './api/api';
